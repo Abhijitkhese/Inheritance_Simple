@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test1
+{
+    public class Animal
+    {
+        public void Cat()
+        {
+            Console.WriteLine("Cat");
+        }
+
+    }
+    public class Birds : Animal
+    {
+        public void Craw()
+        {
+            Console.WriteLine("Craw");
+        }
+    }
+
+    public class trees : Birds
+    {
+        public void Mango()
+        {
+            Console.WriteLine("Mango Tree");
+        }
+    }
+
+
+    public class Program
+    {
+
+        // Inheritance - Child Class / Derived Class Access a Methods and Properties from Parent/base class is known as Derived class .  
+        // Single Inheritance - Derived class is inherates from single base class 
+        // Multilvel Inheritance - Parent class is also derived from anather base class 
+
+        // Multiple Inheritance - One Class is Inherate with 2 or more class (Not allowed in C#)
+
+        //Hirarchical inheritance - One base class inherates with multiple child classes 
+
+        // Hybrid Inheritance - Combination of inheritance 
+        
+        static void Main(string[] args)
+        {
+            Birds B = new Birds();
+            B.Craw();
+            B.Cat();
+
+
+            trees trees = new trees();
+
+            trees.Mango();
+            trees.Cat();
+            trees.Craw();
+
+            Console.ReadKey();
+
+        }
+    }
+}
